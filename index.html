@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Handlebars Solo</title>
+
+		<link rel="stylesheet" href="style.css">
+		<script type="text/javascript" src="jquery.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+
+		<script id="address-template" type="text/x-handlebars-template">
+  			<h1>A brief summary of {{firstName}} {{lastName}}</h1>
+  			<ul>
+  				<li>My name is {{firstName}} {{lastName}}.</li>
+  				<li>My address is {{currentAddress}}.</li> 
+  				<li>I am {{age}} years old.</li> 
+  				<li>I have {{numCats}} cats named {{firstCat}} and {{secondCat}}.</li>
+  			</ul>
+
+  			<h2>Places I have lived include</h2>
+
+  			<ul>
+  			{{#each placesLived}}
+
+  				<li>{{city}}, {{state}} moved to in <b>{{year}}
+  				</li>
+
+  			{{/each}}
+  			</ul>
+
+   			<ul>
+  			{{#each hobbies}}
+
+  				<li>I enjoy {{hobby}}.</li>
+
+  			{{/each}}
+  			</ul>
+		</script>
+	</head>
+
+	<body>
+		<div class="content-placeholder"></div>
+
+		<script type="text/javascript" src="handlebars.js"></script>
+	</body>
+
+</html>
